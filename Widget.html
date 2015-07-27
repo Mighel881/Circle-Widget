@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title>J7CircularWK by JunesiPhone and Jeeepers7 </title>
+       
+<META HTTP-EQUIV="refresh" CONTENT="300">
+
+ <style>
+
+@font-face {
+	font-family: "Default";
+	src: url(Roboto-Thin.ttf);}
+
+	#container ul{
+		margin-top:22px;
+		margin-left:0px;
+		padding: 0;
+		width:320px;
+		list-style-type: none;
+	}
+	#Dates {
+		display: inline;
+	     
+		font-size: 29px;
+		font-family: "Default";
+		color:white;
+		opacity: 1;
+
+	}
+
+	</style>
+
+
+</head>
+<body>
+<div id="Dates">
+	     <p id="sunday" style="position:absolute;top:-28px;left:23%;padding:4.6%;">&nbsp;S&nbsp;</p>
+	     <p id="monday" style="position:absolute;top:-28px;left:52.5%;padding:8px 5px">&nbsp;M&nbsp;</p>
+	     <p id="tuesday" style="position:absolute;top:20px;left:8px;padding:4.6%">&nbsp;T&nbsp;</p>
+	     <p id="wednesday" style="position:absolute;top:20px;left:134px;padding:8px 5px">&nbsp;W&nbsp;</p>
+	     <p id="thursday" style="position:absolute;top:73px;left:21px;padding:4.6%">&nbsp;T&nbsp;</p>
+	     <p id="friday" style="position:absolute;top:73px;left:121px;padding:4.6%">&nbsp;F&nbsp;</p>
+	     <p id="saturday" style="position:absolute;top:52%;left:37.75%;padding:4.6%">&nbsp;S&nbsp;</p> 
+</div>
+
+
+	 <script type="text/javascript">
+	   function calculateDate() {
+	var date = new Date();
+	var weekday = new Array(7);
+	weekday[0] = "sunday";
+	weekday[1] = "monday";
+	weekday[2] = "tuesday";
+	weekday[3] = "wednesday";
+	weekday[4] = "thursday";
+	weekday[5] = "friday";
+	weekday[6] = "saturday";
+	var day = weekday[date.getDay()];
+
+
+    document.getElementById(day).style.backgroundImage="url('markers/markerBlue.png')";
+
+document.getElementById(day).style.backgroundPosition="center";
+
+document.getElementById(day).style.backgroundSize="96.5%";
+
+document.getElementById(day).style.backgroundRepeat="no-repeat";
+
+
+}
+calculateDate();
+
+	setInterval(calculateDate, 120000);
+
+
+
+
+	</script>
+
+</body>
+</html>
